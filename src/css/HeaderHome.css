@@ -1,0 +1,9 @@
+.busca .form-control{
+    background: #fff;
+    border-radius: 200px;
+    box-shadow: 1px 1px 1px 0px #999;
+    padding-left: 40px;
+    font-size: 22px;
+    border: 0;
+    height: 60px;
+}

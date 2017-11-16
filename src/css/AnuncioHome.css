@@ -1,0 +1,9 @@
+.card {
+    border: 0;
+    border-radius: 30px; 
+    box-shadow: 1px 1px 1px 0px #ccc;
+}
+.card img{
+    border: 0;
+    border-radius: 30px; 
+}
