@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-import AnuncioHome from './AnuncioHome'
+import PromocaoHome from './PromocaoHome'
 
 // https://mercadodev-cdd2a.firebaseio.com/anuncios.json?orderBy=%22categoria%22&equalTo=%22empregos-e-negocios%22
 
@@ -10,24 +10,24 @@ class Categoria extends Component {
         super(props)
 
         this.state = {
-            anuncios: {},
+            promocoes: {},
             isLoading: false
         }
         
-        this.loadAnuncios = this.loadAnuncios.bind(this)
-        this.loadAnuncios(this.props.match.params.urlCategoria)
+        this.loadPromocoes = this.loadPromocoes.bind(this)
+        this.loadPromocoes(this.props.match.params.urlCategoria)
     }
 
-    loadAnuncios(urlCategoria){
+    loadPromocoes(urlCategoria){
         this.setState({ 
             isLoading: true,
-            anuncios: {}
+            promocoes: {}
          })
         //carregdr dados
-        const url = `https://mercadodev-cdd2a.firebaseio.com/anuncios.json?orderBy=%22categoria%22&equalTo=%22${urlCategoria}%22`
+        const url = `https://akicupom-a6cc5.firebaseio.com/promocoes.json?orderBy=%22categoria%22&equalTo=%22${urlCategoria}%22`
         axios.get(url)
         .then(data => {
-            this.setState({ anuncios: data.data, isLoading: false })
+            this.setState({ promocoes: data.data, isLoading: false })
             this.categoria = urlCategoria
         })
     }
@@ -35,7 +35,7 @@ class Categoria extends Component {
     componentWillReceiveProps(newProps){
         if(newProps.match.params.urlCategoria){
             if(this.categoria !== newProps.match.params.urlCategoria){
-                this.loadAnuncios(newProps.match.params.urlCategoria)
+                this.loadPromocoes(newProps.match.params.urlCategoria)
             }
         }
     }
@@ -51,12 +51,12 @@ class Categoria extends Component {
                     this.state.isLoading && <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
                 }
                 {
-                    !this.state.isLoading  && Object.keys(this.state.anuncios).length === 0 && <p>Poxa ;(, não temos produtos nessa categoria!</p>
+                    !this.state.isLoading  && Object.keys(this.state.promocoes).length === 0 && <p>Poxa ;( não temos produtos nessa categoria!</p>
                 }
                 <div className="row" >
-                    {Object.keys(this.state.anuncios).map( key => {
-                        const anuncio = this.state.anuncios[key]
-                        return <AnuncioHome key={key} id={key} anuncio ={anuncio} />
+                    {Object.keys(this.state.promocoes).map( key => {
+                        const promocao = this.state.promocoes[key]
+                        return <PromocaoHome key={key} id={key} promocao ={promocao} />
                     })}
                 </div>
                 

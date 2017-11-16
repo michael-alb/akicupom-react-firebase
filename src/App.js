@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import css from './index.css'
 
 import Home from './Home'
-import NovoAnuncio from './NovoAnuncio'
+import NovaPromocao from './NovaPromocao'
 import Categorias from './Categorias'
 import Footer from './Footer'
 
@@ -24,7 +24,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <Route path='/' exact render={() => <Home categorias={this.state.categorias} />} />
-          <Route path='/novo-anuncio' exact render={() => <NovoAnuncio categorias={this.state.categorias} /> } />
+          <Route path='/nova-promocao' exact render={() => <NovaPromocao categorias={this.state.categorias} /> } />
           <Route path='/categorias' render={() => <Categorias categorias={this.state.categorias }/> } />
           <Footer />
         </div>

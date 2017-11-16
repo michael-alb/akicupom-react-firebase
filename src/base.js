@@ -1,11 +1,11 @@
 const config = {
-    apiKey: "AIzaSyCZ87fdpqgOMHH6evRhyLsbB5r33nln48Q",
-    authDomain: "mercadodev-cdd2a.firebaseapp.com",
-    databaseURL: "https://mercadodev-cdd2a.firebaseio.com",
-    projectId: "mercadodev-cdd2a",
-    storageBucket: "gs://mercadodev-cdd2a.appspot.com/",
-    messagingSenderId: "1006591301002"
-  }
+  apiKey: "AIzaSyAARPsvImJvuvnBt1O-hluexqCDkUyGMLA",
+  authDomain: "akicupom-a6cc5.firebaseapp.com",
+  databaseURL: "https://akicupom-a6cc5.firebaseio.com",
+  projectId: "akicupom-a6cc5",
+  storageBucket: "gs://akicupom-a6cc5.appspot.com/",
+  messagingSenderId: "257310186113"
+}
 
   const Rebase = require('re-base')
   const firebase = require('firebase/app')

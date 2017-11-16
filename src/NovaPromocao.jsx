@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom'
 
 import HeaderInterno from './HeaderInterno'
 
-class NovoAnuncio extends Component {
+class NovaPromocao extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -18,17 +18,17 @@ class NovoAnuncio extends Component {
         const ref = storage.ref(name)
         ref.put(file)
             .then( img => {
-                const novoAnuncio = {
+                const novaPromocao = {
                     nome: this.nome.value,
                     descricao: this.descricao.value,
                     preco: this.preco.value,
                     telefone: this.telefone.value,
                     foto: img.metadata.downloadURLs[0],
-                    vendedor: this.vendedor.value,
+                    fornecedor: this.fornecedor.value,
                     categoria: this.categoria.value
                 }
-                base.push('anuncios', {
-                    data: novoAnuncio
+                base.push('promocoes', {
+                    data: novaPromocao
                 })
                 .then(() => {
                         this.setState({ success: true })
@@ -43,7 +43,7 @@ class NovoAnuncio extends Component {
                 { this.state.success && <Redirect to='/' />}
                 <HeaderInterno />
                 <div className='container' style={{paddingTop:'120px'}}>
-                    <h1>Novo anúncio</h1>
+                    <h1>Nova Promoção</h1>
                     <form onSubmit={this.handleSubmit}>
                         <div className='form-group'>
                             <label htmlFor='foto'>Foto</label>
@@ -72,8 +72,8 @@ class NovoAnuncio extends Component {
                             <input type='text' className='form-control' id='telefone' placeholder='Insira o telefone para contato'  ref={(ref) => this.telefone = ref}/>
                         </div>
                         <div className='form-group'>
-                            <label htmlFor='vendedor'>Vendedor</label>
-                            <input type='text' className='form-control' id='vendedor' placeholder='Digite seu nome'  ref={(ref) => this.vendedor = ref}/>
+                            <label htmlFor='vendedor'>Fornecedor</label>
+                            <input type='text' className='form-control' id='vendedor' placeholder='Digite seu nome'  ref={(ref) => this.fornecedor = ref}/>
                         </div>
                         <button type='submit' className='btn btn-warning'>Salvar Anúncio</button>
                     </form>
@@ -82,4 +82,4 @@ class NovoAnuncio extends Component {
         )
     }
 }
-export default NovoAnuncio
+export default NovaPromocao

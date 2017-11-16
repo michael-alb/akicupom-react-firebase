@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import base from './base'
 
 import HeaderHome from './HeaderHome'
-import AnuncioHome from './AnuncioHome'
+import PromocaoHome from './PromocaoHome'
 import AdsHome from './AdsHome'
 import LinkCategoria from './LinkCategoria'
 
@@ -12,11 +12,11 @@ class Home extends Component{
         super(props)
     
         this.state = {
-          anuncios: []
+          promocoes: []
         }
-        base.bindToState('anuncios',{
+        base.bindToState('promocoes',{
           context: this,
-          state: 'anuncios',
+          state: 'promocoes',
           queries:{
             limitToLast: 6
           }
@@ -45,9 +45,9 @@ class Home extends Component{
                     <br/>
                 <h3>Ultimos Anúncios</h3>
                 <div className="row">
-                    { Object.keys(this.state.anuncios).map( key => {
-                      const anuncio = this.state.anuncios[key]
-                    return <AnuncioHome key={key} id={key} anuncio={anuncio} />
+                    { Object.keys(this.state.promocoes).map( key => {
+                      const promocao = this.state.promocoes[key]
+                    return <PromocaoHome key={key} id={key} promocao={promocao} />
                     })}
                 </div>
                 </div>
