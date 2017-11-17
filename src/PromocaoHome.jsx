@@ -12,8 +12,8 @@ const PromocaoHome = ({id, promocao}) => {
             <h4 className="card-title">
               <a to={`/anuncios/ver/`}>{promocao.nome}</a>
             </h4>
-            <h5>{promocao.preco}</h5>
             <p className="card-text">{promocao.descricao}</p>
+            <p><small><Link to=''>COMPARTILHAR</Link></small></p>
             <Link to={`/categorias/${promocao.categoria}/${id}`} className="btn btn-warning btn-lg btn-block">Pegar cupom</Link>
           </div>
         </div>
