@@ -24,7 +24,7 @@ class Categoria extends Component {
             promocoes: {}
          })
         //carregdr dados
-        const url = `https://akicupom-a6cc5.firebaseio.com/promocoes.json?orderBy=%22categoria%22&equalTo=%22${urlCategoria}%22`
+        const url = `https://akicupom-e5439.firebaseio.com/promocoes.json?orderBy=%22categoria%22&equalTo=%22${urlCategoria}%22`
         axios.get(url)
         .then(data => {
             this.setState({ promocoes: data.data, isLoading: false })

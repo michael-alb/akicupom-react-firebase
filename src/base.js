@@ -1,10 +1,10 @@
 const config = {
-  apiKey: "AIzaSyAARPsvImJvuvnBt1O-hluexqCDkUyGMLA",
-  authDomain: "akicupom-a6cc5.firebaseapp.com",
-  databaseURL: "https://akicupom-a6cc5.firebaseio.com",
-  projectId: "akicupom-a6cc5",
-  storageBucket: "gs://akicupom-a6cc5.appspot.com/",
-  messagingSenderId: "257310186113"
+    apiKey: "AIzaSyBziH6GCNN-2z-5MXYACdVSJciUxS8NNpI",
+    authDomain: "akicupom-e5439.firebaseapp.com",
+    databaseURL: "https://akicupom-e5439.firebaseio.com",
+    projectId: "akicupom-e5439",
+    storageBucket: "gs://akicupom-a6cc5.appspot.com/",
+    messagingSenderId: "829727158156"
 }
 
   const Rebase = require('re-base')

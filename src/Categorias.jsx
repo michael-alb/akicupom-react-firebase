@@ -10,23 +10,22 @@ const Categorias = (props) => {
         <div>
         <HeaderInterno />
         <div className='container' style={{ paddingTop: '120px'}}>
-            <h1>Categorias</h1>
-            <div className='row'>
-                <div className='col-lg-3'>
-                    <ul>
-                    {
-                        props.categorias.map(
-                            cat => {
-                                return (
-                                    <li key={cat.url}>
-                                        <Link to={`/categorias/${cat.url}`}>{cat.categoria}</Link>
-                                    </li>
-                                )
-                            }
+            <nav className="">
+            <ul>
+            {
+                props.categorias.map(
+                    cat => {
+                        return (
+                            <li key={cat.url}>
+                                <Link to={`/categorias/${cat.url}`}>{cat.categoria}</Link>
+                            </li>
                         )
                     }
-                    </ul>
-                </div>
+                )
+            }
+            </ul>
+            </nav>
+            <div className='row'>
                 <div className='col-lg-9' >
                     <Route path='/categorias/:urlCategoria' exact component={ Categoria } />
                     <Route path='/categorias/:urlCategoria/:idPromocao' render={(props) => <Promocao  {...props} />} />

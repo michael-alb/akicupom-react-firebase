@@ -1,0 +1,14 @@
+.bg-yellow{
+    background: #ffbd00;
+}
+nav ul a{
+    color: #333;
+    font-weight: bold;
+    font-size: 13px;
+}
+nav ul a:hover{
+    color: #000;
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none;
+}
