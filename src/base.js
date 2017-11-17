@@ -3,7 +3,7 @@ const config = {
     authDomain: "akicupom-e5439.firebaseapp.com",
     databaseURL: "https://akicupom-e5439.firebaseio.com",
     projectId: "akicupom-e5439",
-    storageBucket: "gs://akicupom-a6cc5.appspot.com/",
+    storageBucket: "gs://akicupom-e5439.appspot.com/",
     messagingSenderId: "829727158156"
 }
 

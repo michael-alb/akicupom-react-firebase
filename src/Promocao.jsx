@@ -11,7 +11,7 @@ class Promocao extends Component{
         }
 
         const id = this.props.match.params.idPromocao
-        const url = `https://akicupom-e5439.firebaseio.com/promocoes/${id}.json`
+        const url = `https://akicupom-e5439.firebaseio.com//promocoes/${id}.json`
         axios
             .get(url)
             .then(data =>{
