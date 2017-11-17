@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 import PromocaoHome from './PromocaoHome'
+import css from './css/Categoria.css'
 
 // https://mercadodev-cdd2a.firebaseio.com/anuncios.json?orderBy=%22categoria%22&equalTo=%22empregos-e-negocios%22
 
@@ -43,10 +44,12 @@ class Categoria extends Component {
     render(){
         return(
             <div>
-                <h1>
-                Categoria: &nbsp; 
-                {this.props.match.params.urlCategoria}
-                </h1>
+                <div className='breadcrumb'>
+                    <h1>
+                    Categoria: &nbsp; 
+                    {this.props.match.params.urlCategoria}
+                    </h1>
+                </div>
                 {
                     this.state.isLoading && <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
                 }
