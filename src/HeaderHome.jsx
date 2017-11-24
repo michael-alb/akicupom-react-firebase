@@ -10,7 +10,8 @@ const HeaderHome = (props) => {
     return(
         <div className="jumbotron">
         <div className="container">
-          <h1 className="display-3 text-center"><img src={logo} className="App-logo" alt="logo" width="200" /></h1>
+        <p className="text-right"><Link to='/login'>Login</Link></p>
+          <h1 className="display-3 text-center"><img src={logo} className="App-logo" alt="logo" width="200"  /></h1>
           <div className='row'>
           <div className='col-lg-3'></div>
             <div className='col-lg-6'>

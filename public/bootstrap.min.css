@@ -8,12 +8,7 @@
 
 .jumbotron {
   background-image: url("/background.png");
-  background-size: cover;
-  background-position: center bottom ;
-  height: 500px;
-}
-.btn-anuncie{
-  color: #1f2e78;
-  background-color: #ffe703;
-  border-color: #202e78;
+  background-size: 100% 100%;
+  background-position: center bottom;
+  height: 700px;
 }
