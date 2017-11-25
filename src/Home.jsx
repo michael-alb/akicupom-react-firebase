@@ -50,6 +50,7 @@ class Home extends Component{
                     return <PromocaoHome key={key} id={key} promocao={promocao} />
                     })}
                 </div>
+                
                 </div>
         </div>
     )

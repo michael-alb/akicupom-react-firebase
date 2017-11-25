@@ -1,8 +1,7 @@
 .bg-blue{
     background: #00103f;
 }
-.footer {
-    position: absolute;
+footer {
     right: 0;
     bottom: 0;
     left: 0;
@@ -10,3 +9,12 @@
     background-color: #efefef;
     text-align: center;
   }
+
+  footer1 {
+    background: #FDBE34;
+    padding: 30px;
+    position: relative;
+    height: auto;
+    bottom: 0;
+    width: 100%;
+}
