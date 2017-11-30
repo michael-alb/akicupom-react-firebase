@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import firebase from 'firebase'
 import css from './css/Login.css'
+import googlelogin from './img/google-login.svg'
 
 import HeaderInterno from './HeaderInterno'
 
@@ -54,7 +55,7 @@ class Login extends Component {
                     <button className='btn btn-warning btn-block' type='button'>Entrar</button>
                     <hr/>
                     <p>ou faça o login com:</p>
-                    <button className="loginBtn loginBtn--google btn-block btn-lg" onClick={signIn} type='button'>Entre com Google Login</button>
+                    <button className="loginBtn loginBtn--google btn-block btn-lg" onClick={signIn} type='button'><img src={googlelogin}/>Entre com Google Login</button>
                 </form>
                 </div>
                 <div className='col-lg-4'></div>
