@@ -51,10 +51,10 @@ class Login extends Component {
                     <div className='form-group'>
                     <input className='form-control' type='password' placeholder='Senha'/>
                     </div>
-                    <button className='btn btn-warning' type='button'>Entrar</button>
+                    <button className='btn btn-warning btn-block' type='button'>Entrar</button>
                     <hr/>
                     <p>ou faça o login com:</p>
-                    <button className="loginBtn loginBtn--google" onClick={signIn} type='button'>Google Login</button>
+                    <button className="loginBtn loginBtn--google btn-block btn-lg" onClick={signIn} type='button'>Entre com Google Login</button>
                 </form>
                 </div>
                 <div className='col-lg-4'></div>

@@ -6,14 +6,14 @@
   position: relative;
   /* width: 13em;  - apply for fixed size */
   margin: 0.2em;
-  padding: 0 15px 0 46px;
-  border: none;
+  padding: 6px 15px 6px 46px; 
+  border: 1px solid #e9eaea;
   text-align: left;
   line-height: 34px;
   white-space: nowrap;
   border-radius: 0.2em;
   font-size: 16px;
-  color: #FFF;
+  color: #5A5B5E;
 }
 .loginBtn:before {
   content: "";
@@ -33,14 +33,16 @@
 
 /* Google */
 .loginBtn--google {
-  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
-  background: #DD4B39;
+  font-family: "Quicksand", sans-serif;
+  background: #FFFFFF;
 }
 .loginBtn--google:before {
-  border-right: #BB3F30 1px solid;
-  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+  border-right: #FFFFFF 1px solid;
+  background: url('https://sites.google.com/site/clickesites/google_login.svg') 15px 14px no-repeat;
 }
 .loginBtn--google:hover,
 .loginBtn--google:focus {
-  background: #E74B37;
+  transition: box-shadow, border .3s;
+  border: 2px solid #CECECE;
+  box-shadow: 0 4px 8px rgba(212,213,214,2);
 }
