@@ -9,36 +9,46 @@ import HeaderInterno from './HeaderInterno'
 class Login extends Component {
 
     
-    render() {
+    constructor () {
+        super()
+        this.handleAuth = this.handleAuth.bind(this)
+        this.handleLogout = this.handleLogout.bind(this)
+    }
+    
+    state = {
+        user: null
+    }
+    
+    componentWillMount () {
+        firebase.auth().onAuthStateChanged(user => {
+            this.setState({ user })
+        })
+    }
+    
+      handleAuth () {
+        const provider = new firebase.auth.GoogleAuthProvider()
+        provider.addScope('https://www.googleapis.com/auth/plus.login')
+    
+        firebase.auth().signInWithPopup(provider)
+          .then(result => console.log(`${result.user.email} ha iniciado sesión`))
+          .catch(error => console.log(`Error ${error.code}: ${error.message}`))
+      }
+    
+      handleLogout () {
+        firebase.auth().signOut()
+          .then(result => console.log('Te has desconectado correctamente'))
+          .catch(error => console.log(`Error ${error.code}: ${error.message}`))
+      } 
 
-        var provider = new firebase.auth.GoogleAuthProvider();
-        firebase.auth().languageCode = 'pt';
-        provider.setCustomParameters({
-        'login_hint': 'user@example.com'
-        });        
-
-        function signIn(){
-            firebase.auth().signInWithPopup(provider).then(function(result) {
-                // This gives you a Google Access Token. You can use it to access the Google API.
-                var token = result.credential.accessToken;
-                // The signed-in user info.
-                var user = result.user;
-                // ...
-                }).catch(function(error) {
-                // Handle Errors here.
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                // The email of the user's account used.
-                var email = error.email;
-                // The firebase.auth.AuthCredential type that was used.
-                var credential = error.credential;
-                // ...
-                });
-        }
-
+      render(){
         return (
             <div>
-                <HeaderInterno />
+                <HeaderInterno 
+                appName='Chat Real'
+                user={this.state.user}
+                onAuth={this.handleAuth}
+                onLogout={this.handleLogout}
+                />
                 <div className='container' style={{ paddingTop: '150px'}}>
                 <div className='row'>
                 <div className='col-lg-4'></div>
@@ -55,7 +65,7 @@ class Login extends Component {
                     <button className='btn btn-warning btn-block' type='button'>Entrar</button>
                     <hr/>
                     <p>ou faça o login com:</p>
-                    <button className="loginBtn loginBtn--google btn-block btn-lg" onClick={signIn} type='button'><img src={googlelogin}/>Entre com Google Login</button>
+                    <button className="loginBtn loginBtn--google btn-block btn-lg" onClick={this.handleAuth} type='button'><img src={googlelogin}/>Entre com Google Login</button>
                 </form>
                 </div>
                 <div className='col-lg-4'></div>
@@ -63,7 +73,7 @@ class Login extends Component {
                 </div>
             </div>
         )
-    }
+      }
 }
 
 export default Login
