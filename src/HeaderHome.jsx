@@ -50,7 +50,8 @@ class HeaderHome extends Component {
                 onAuth={this.handleAuth}
                 onLogout={this.handleLogout}
             />
-            <div className="container">           
+            <div className="container"> 
+            <p className="text-right"><Link to='/login'>Login</Link></p>          
               <h1 className="display-3 text-center"><img src={logo} className="App-logo" alt="logo" width="200"  /></h1>
               <div className='row'>
               <div className='col-lg-3'></div>
