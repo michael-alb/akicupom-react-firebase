@@ -11,7 +11,7 @@ function HeaderInterno ({user, appName, onLogout, onAuth}) {
           <ul className='navbar right'>
             <li>
               <img
-                width='32'
+                width='32' float='left'
                 className='avatar circle responsive-img'
                 src={user.photoURL}
               />

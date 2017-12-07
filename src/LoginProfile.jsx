@@ -18,28 +18,17 @@ function LoginProfile ({ appName, user, onAuth, onLogout }) {
               />
             
             <p>{user.displayName}</p>
-            <button class="btn btn-block btn-social btn-google" onClick={onLogout}>
-            <span class="fa fa-google"></span> Sair
-          </button>
+            <a class="link-sair" onClick={onLogout}>Sair
+          </a>
           </div>
         )
       }
-    
-      function renderLoginButton () {
-        return (
-          <div className='render-login-button'> 
-            <button class="btn btn-block btn-social btn-google" onClick={onAuth}>
-            <span class="fa fa-google"></span> Entre com Google
-          </button> 
-          </div>
-        )
-    }
 
     return (
         <ul className='navbar right-top'> 
           <li>
           <p className='show-login'></p>
-                {user ? renderUserData() : renderLoginButton()}
+                {user ? renderUserData() : false }
           </li>
             
         </ul>

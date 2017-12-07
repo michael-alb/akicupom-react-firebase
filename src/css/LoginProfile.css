@@ -3,6 +3,12 @@ div.render-user-data img {
     width: 42px;
 }
 
+div.render-user-data {
+    position: relative;
+    left: 835px;
+    color: white;
+}
+
 div.login.screen {
     background-color: none;
 }
