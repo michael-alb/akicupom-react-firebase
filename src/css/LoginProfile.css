@@ -1,20 +1,29 @@
 div.render-user-data img {
+    position: relative;
     border-radius: 50%;
-    width: 42px;
+    width: 44px;
+    left: 30px;
+    box-shadow: .8px .8px 11px #888888;
 }
 
 div.render-user-data {
     position: relative;
-    left: 835px;
+    left: 845px;
     color: white;
 }
 
 div.login.screen {
     background-color: none;
+    
 }
 
 div.render-login-button {
     position: relative;
     left: 835px;
     bottom: 55px;
+}
+
+a.link-sair {
+    position: relative;
+    left: 80px;
 }

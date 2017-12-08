@@ -9,30 +9,30 @@ import HeaderHome from './HeaderHome'
 
 function LoginProfile ({ appName, user, onAuth, onLogout }) {
 
-    function renderUserData () {
-        return (
-          <div className='render-user-data'>            
-              <img
-                className='avatar circle'
-                src={user.photoURL}
-              />
-            
-            <p>{user.displayName}</p>
-            <a class="link-sair" onClick={onLogout}>Sair
-          </a>
-          </div>
-        )
-      }
-
+  function renderUserData () {
     return (
-        <ul className='navbar right-top'> 
-          <li>
-          <p className='show-login'></p>
-                {user ? renderUserData() : false }
-          </li>
-            
-        </ul>
+      <div className='render-user-data'>            
+          <img
+            className='avatar circle'
+            src={user.photoURL}
+          />
+        
+        <p>{user.displayName}</p>
+        <a class="link-sair" onClick={onLogout}>Sair
+      </a>
+      </div>
     )
+  }
+
+  return (
+      <ul className='navbar right-top'> 
+        <li>
+        <p className='show-login'></p>
+              {user ? renderUserData() : false }
+        </li>
+          
+      </ul>
+  )
 }
 
 export default LoginProfile
