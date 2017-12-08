@@ -11,12 +11,12 @@ const Footer = (props) => {
         <div className="col-4">
           <h5>Institucional</h5>
             <ul>
-                  <li><a className="white-text" href="#!">Blog</a></li>
-                  <li><a className="white-text" href="#!">Termos de uso</a></li>
-                  <li><a className="white-text" href="#!">Como usar o cupom</a></li>
+                  <li><Link className="white-text" to={'blog'}>Blog</Link></li>
+                  <li><Link className="white-text" to={'termos-de-uso'}>Termos de uso</Link></li>
+                  <li><Link className="white-text" to={'como-usar-o-cupom'}>Como usar o cupom</Link></li>
                   <li><Link className="white-text" to={'perguntas-frenquentes'} >Perguntas frequentes (FAQ)</Link></li>
-                  <li><a className="white-text" href="#!">Seja nosso parceiro</a></li>
-                  <li><a className="white-text" href="#!">Fale conosco</a></li>
+                  <li><Link className="white-text" to={'seja-nosso-parceiro'}>Seja nosso parceiro</Link></li>
+                  <li><Link className="white-text" to={'false-conosco'}>Fale conosco</Link></li>
             </ul>
         </div>
         <div className="col-4"></div>
