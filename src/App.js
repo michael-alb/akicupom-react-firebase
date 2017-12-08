@@ -8,7 +8,12 @@ import NovaPromocao from './NovaPromocao'
 import Categorias from './Categorias'
 import Login from './Login'
 import Footer from './Footer'
+import Blog from './footer-links/Blog'
+import ComoUsarOCupom from './footer-links/ComoUsarOCupom'
+import FaleConosco from './footer-links/FaleConosco'
 import PerguntasFrequentes from './footer-links/PerguntasFrequentes'
+import SejaNossoParceiro from './footer-links/SejaNossoParceiro'
+import TermosDeUso from './footer-links/TermosDeUso'
 
 class App extends Component {
   constructor(props){

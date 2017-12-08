@@ -10,3 +10,5 @@ const PerguntasFrequentes = (props) => {
             </div>
             </div>
     )}
+
+    export default SejaNossoParceiro

@@ -26,3 +26,5 @@ const PerguntasFrequentes = (props) => {
         </div>
     )
 }
+
+export default ComoUsarOCupom
