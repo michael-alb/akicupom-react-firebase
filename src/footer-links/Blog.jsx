@@ -5,7 +5,7 @@ const Blog = (props) => {
     return (
         <div>
         <HeaderInterno />
-            <div className="container">
+            <div className="container" style={{ paddingTop: '150px'}}>
                 <p>Blog</p>
             </div>
             </div>

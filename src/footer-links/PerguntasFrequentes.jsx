@@ -5,7 +5,7 @@ const PerguntasFrequentes = (props) => {
   return (
     <div>
       <HeaderInterno />
-      <div className="container">
+      <div className="container" style={{ paddingTop: '150px'}}>
 
         <div class="panel panel-default">
           <div class="panel-heading"><p1>Quer saber como a Akicupom funciona? É só dar uma olhadinha nos 3 passos abaixo!</p1></div>

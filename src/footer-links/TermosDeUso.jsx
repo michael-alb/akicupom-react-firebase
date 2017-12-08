@@ -5,7 +5,7 @@ const TermosDeUso = (props) => {
     return (
         <div>
             <HeaderInterno />
-            <div className="container">
+            <div className="container" style={{ paddingTop: '150px'}}>
                 <h3>Termos de uso</h3>
                 <p>O presente Termo de Uso e contrato de ades&atilde;o regulamenta as condi&ccedil;&otilde;es gerais de utiliza&ccedil;&atilde;o dos servi&ccedil;os prestados por INNOVENTURES ID&Eacute;IAS EM SOLU&Ccedil;&Otilde;ES LTDA. sociedade limitada, inscrita no CNPJ sob n.&ordm; 14.183.431/0001-45, doravante denominada "akicupom&rdquo;, para a impress&atilde;o de cupons de desconto disponibilizados no site www.akicupom.com.br para posterior aquisi&ccedil;&atilde;o de bens, produtos e servi&ccedil;os.</p>
                 <p>E de outro lado, qualquer pessoa, doravante nominada "Usu&aacute;rio", que pretenda utilizar os cupons de desconto da akicupom dever&aacute; aceitar o presente contrato de ades&atilde;o e Termo de Uso, e todas as cl&aacute;usulas. A ACEITA&Ccedil;&Atilde;O DO TERMO DE USO &Eacute; ABSOLUTAMENTE INDISPENS&Aacute;VEL &Agrave; UTILIZA&Ccedil;&Atilde;O DO WEBSITE E SEUS SERVI&Ccedil;OS.</p>

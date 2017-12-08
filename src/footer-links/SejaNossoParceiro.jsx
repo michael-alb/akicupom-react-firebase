@@ -5,7 +5,7 @@ const SejaNossoParceiro = (props) => {
     return (
         <div>
         <HeaderInterno />
-            <div className="container">
+            <div className="container" style={{ paddingTop: '150px'}}>
                 
             </div>
             </div>
