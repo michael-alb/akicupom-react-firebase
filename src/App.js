@@ -35,12 +35,12 @@ class App extends Component {
         <div className="App">
           <Route path='/' exact render={() => <Home categorias={this.state.categorias} />} />
           <Route path='/login' exact render={() => <Login />} />
-          <Route path='/blog' render={() => <Blog />} />
-          <Route path='/como-usar-o-cupom' render={() => <ComoUsarOCupom />} />
-          <Route path='/fale-conosco' render={() => <FaleConosco />} />
-          <Route path='/perguntas-frequentes' render={() => <PerguntasFrequentes />} />
+          <Route path='/blog' exact render={() => <Blog />} />
+          <Route path='/como-usar-o-cupom' exact render={() => <ComoUsarOCupom />} />
+          <Route path='/false-conosco' exact render={() => <FaleConosco />} />
+          <Route path='/perguntas-frenquentes' exact render={() => <PerguntasFrequentes />} />
           <Route path='/seja-nosso-parceiro' render={() => <SejaNossoParceiro />} />
-          <Route path='/termos-de-uso' render={() => <TermosDeUso />} />
+          <Route path='/termos-de-uso' exact render={() => <TermosDeUso />} />
           <Route path='/nova-promocao' exact render={() => <NovaPromocao categorias={this.state.categorias} /> } />
           <Route path='/categorias' render={() => <Categorias categorias={this.state.categorias }/> } />
           <Footer />

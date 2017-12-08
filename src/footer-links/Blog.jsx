@@ -1,7 +1,7 @@
 import React from 'react'
 import HeaderInterno from '../HeaderInterno'
 
-const PerguntasFrequentes = (props) => {
+const Blog = (props) => {
     return (
         <div>
         <HeaderInterno />
